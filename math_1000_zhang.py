@@ -1,3 +1,4 @@
+#以「第1章」……「第数字章」为规则的拆分章节脚本
 import re
 import chardet
 
