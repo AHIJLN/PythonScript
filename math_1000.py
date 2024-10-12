@@ -1,3 +1,4 @@
+#以章节编号「9.」为拆分规则的自动化脚本
 import re
 import chardet
 
