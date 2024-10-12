@@ -1,3 +1,4 @@
+#用于自动化GPT逐次复制当前的文件，再加上Prompt点击窗口并Enter的自动化脚本
 import os
 import re
 import pyautogui
