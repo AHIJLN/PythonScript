@@ -9,8 +9,11 @@ output_gifs = ["output1.gif"]
 for input_video, output_gif in zip(input_videos, output_gifs):
     # 加载视频剪辑
     clip = VideoFileClip(input_video)
-    
-    # 将视频剪辑转换为GIF
-    clip.write_gif(output_gif, fps=10, colors=256)
-    print(f"已保存GIF至 {output_gif}")
 
+    # 调整尺寸（例如高度设为300像素，按比例缩放）
+    clip_resized = clip.resize(height=300)
+
+    # 将视频剪辑转换为GIF，降低FPS和颜色数
+    clip_resized.write_gif(output_gif, fps=8, program='ffmpeg', colors=128)
+
+    print(f"已保存GIF至 {output_gif}")
